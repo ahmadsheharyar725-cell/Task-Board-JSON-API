@@ -1,26 +1,20 @@
 [
     {
-        "id": 1757273796932,
-        "title": "Design landing page",
-        "assignTo": "Kiran Bibi",
+        "id": 1774998648338,
+        "title": "Front End",
+        "assignTo": "Hira Khan",
+        "status": "In Progress"
+    },
+    {
+        "id": 1783773919849,
+        "title": "Front End",
+        "assignTo": "Adnan Sheikh",
         "status": "To Do"
     },
     {
-        "id": 1757273813127,
-        "title": "Implement login API",
+        "id": 1783776360159,
+        "title": "Backend",
         "assignTo": "Ahsan Ali",
-        "status": "To Do"
-    },
-    {
-        "id": 1757273838741,
-        "title": "Update database ",
-        "assignTo": "Hamza Rauf",
-        "status": "To Do"
-    },
-    {
-        "id": 1757273858828,
-        "title": "Fix navbar responsiveness",
-        "assignTo": "Ali Khan",
         "status": "In Progress"
     }
 ]

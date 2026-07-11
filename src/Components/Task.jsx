@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Spinner, Button, Modal, Form, Table } from "react-bootstrap";
 import { TeamContext } from "../Context/TeamContext";
-
+import API_URL from "../config";
 const Task = () => {
   const { tasks, team, dispatch } = useContext(TeamContext);
   const [loading, setLoading] = useState(false);
@@ -35,7 +35,7 @@ const Task = () => {
     };
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:5000/tasks/${editTask.id}`, {
+      const res = await fetch(`${API_URL}/tasks/${editTask.id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedTask),
@@ -53,7 +53,7 @@ const Task = () => {
   const handleDelete = async (id) => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+      const res = await fetch(`${API_URL}/tasks/${id}`, {
         method: "DELETE",
       });
       if (!res.ok) throw new Error("Failed to delete task!");

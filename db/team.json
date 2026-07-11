@@ -19,6 +19,6 @@
     { "id": 17, "name": "Tariq Aziz", "email": "tariq.aziz@example.com", "role": "Backend Developer" },
     { "id": 18, "name": "Hira Khan", "email": "hira.khan@example.com", "role": "Frontend Developer" },
     { "id": 19, "name": "Danish Farooq", "email": "danish.farooq@example.com", "role": "Mobile Developer" },
-    { "id": 20, "name": "Lubna Akhtar", "email": "lubna.akhtar@example.com", "role": "Content Writer" }
+    { "id": 20, "name": "Humair Nazim", "email": "humair.nazim@example.com", "role": "Content Writer" }
   ]
 }

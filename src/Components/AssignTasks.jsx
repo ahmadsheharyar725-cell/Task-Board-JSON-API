@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Container, Form, Button, Card, Row, Col } from "react-bootstrap";
 import { TeamContext } from "../Context/TeamContext";
-
+import API_URL from "../config";
 
 const AssignTasks = () => {
   const{team,dispatch}=useContext(TeamContext);
@@ -22,7 +22,7 @@ const AssignTasks = () => {
   };
 
   try {
-    const res = await fetch("http://localhost:5000/tasks", {
+    const res = await fetch(`${API_URL}/tasks`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

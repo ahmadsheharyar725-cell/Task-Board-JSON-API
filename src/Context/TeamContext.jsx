@@ -1,6 +1,6 @@
             import React, { createContext,  useEffect, useReducer, useState } from 'react'
     import { intialTaskState, taskReducer } from './TaskReducer';
-
+import API_URL from '../config';
             export const TeamContext=createContext();
 
             export const TeamProvider=({children})=>{
@@ -12,7 +12,7 @@
                     const fetchData=async()=>{
                         setLoading(true);
                         try{
-                            const res=await fetch("http://localhost:5000/");
+                            const res=await fetch(`${API_URL}/`);
                             const data=await res.json();
                             setTeam(data.team||[]);
                         if(data.tasks){
