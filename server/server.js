@@ -25,8 +25,12 @@ app.get("/", (req, res) => {
       tasks,
     });
   } catch (err) {
-    console.error("Error fetching data!", err);
-    res.status(500).json({ error: "Failed to fetch data!" });
+    console.error(err);
+
+    res.status(500).json({
+      message: err.message,
+      stack: err.stack,
+    });
   }
 });
 
