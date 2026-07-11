@@ -7,8 +7,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Database files
-const teamFile = path.join(__dirname, "../db/team.json");
-const tasksFile = path.join(__dirname, "../db/tasks.json");
+const teamFile = path.join(__dirname, "db", "team.json");
+const tasksFile = path.join(__dirname, "db", "tasks.json");
 
 app.use(cors());
 app.use(express.json());
