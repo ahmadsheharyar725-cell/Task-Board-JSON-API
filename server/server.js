@@ -13,7 +13,9 @@ const tasksFile = path.join(__dirname, "db", "tasks.json");
 app.use(cors());
 app.use(express.json());
 
-// Get Team + Tasks
+// =========================
+// GET TEAM + TASKS
+// =========================
 app.get("/", (req, res) => {
   try {
     const teamData = fs.readFileSync(teamFile, "utf8");
@@ -36,7 +38,9 @@ app.get("/", (req, res) => {
   }
 });
 
-// Add Task
+// =========================
+// ADD TASK
+// =========================
 app.post("/tasks", (req, res) => {
   try {
     const taskData = fs.readFileSync(tasksFile, "utf8");
@@ -53,12 +57,15 @@ app.post("/tasks", (req, res) => {
     console.error(err);
 
     res.status(500).json({
-      error: "Failed to save task!",
+      message: err.message,
+      stack: err.stack,
     });
   }
 });
 
-// Delete Task
+// =========================
+// DELETE TASK
+// =========================
 app.delete("/tasks/:id", (req, res) => {
   try {
     const taskData = fs.readFileSync(tasksFile, "utf8");
@@ -77,12 +84,15 @@ app.delete("/tasks/:id", (req, res) => {
     console.error(err);
 
     res.status(500).json({
-      error: "Failed to delete task!",
+      message: err.message,
+      stack: err.stack,
     });
   }
 });
 
-// Update Task
+// =========================
+// UPDATE TASK
+// =========================
 app.patch("/tasks/:id", (req, res) => {
   try {
     const taskData = fs.readFileSync(tasksFile, "utf8");
@@ -104,12 +114,15 @@ app.patch("/tasks/:id", (req, res) => {
     console.error(err);
 
     res.status(500).json({
-      error: "Failed to update task!",
+      message: err.message,
+      stack: err.stack,
     });
   }
 });
 
-// Start Server
+// =========================
+// START SERVER
+// =========================
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
